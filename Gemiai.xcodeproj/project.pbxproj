@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44425111B6796A21CE4A584A /* Pods_Gemiai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD25F735979BB60DAEB5712 /* Pods_Gemiai.framework */; };
+		70145A8A2D902F4800D82076 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70145A882D902F4800D82076 /* Mock.generated.swift */; };
+		708C8ADB2D90296100352D0C /* GemiaiViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708C8ADA2D90296100352D0C /* GemiaiViewModelSpec.swift */; };
+		7094725A2D8E61360089EFB0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 709472592D8E61360089EFB0 /* RxCocoa */; };
+		7094725C2D8E61360089EFB0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7094725B2D8E61360089EFB0 /* RxSwift */; };
+		7094725E2D8E61360089EFB0 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7094725D2D8E61360089EFB0 /* RxTest */; };
+		709472612D8E616B0089EFB0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 709472602D8E616B0089EFB0 /* Quick */; };
+		709472632D8E616B0089EFB0 /* QuickLint in Frameworks */ = {isa = PBXBuildFile; productRef = 709472622D8E616B0089EFB0 /* QuickLint */; };
+		709472662D8E61860089EFB0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 709472652D8E61860089EFB0 /* Nimble */; };
+		7094729E2D8E74D20089EFB0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094729D2D8E74C60089EFB0 /* HomeViewModel.swift */; };
+		709472A02D8E769E0089EFB0 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7094729F2D8E769C0089EFB0 /* Chat.swift */; };
+		70C210F12D8E595700B175F9 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 70C210F02D8E595700B175F9 /* GoogleGenerativeAI */; };
+		70D07D422D8E53B2009622EE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D2F2D8E53B2009622EE /* AppCoordinator.swift */; };
+		70D07D432D8E53B2009622EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D302D8E53B2009622EE /* Coordinator.swift */; };
+		70D07D442D8E53B2009622EE /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D312D8E53B2009622EE /* Storyboarded.swift */; };
+		70D07D452D8E53B2009622EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D332D8E53B2009622EE /* AppDelegate.swift */; };
+		70D07D462D8E53B2009622EE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D3A2D8E53B2009622EE /* HomeViewController.swift */; };
+		70D07D472D8E53B2009622EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D07D372D8E53B2009622EE /* LaunchScreen.storyboard */; };
+		70D07D482D8E53B2009622EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D07D392D8E53B2009622EE /* Main.storyboard */; };
+		70D07D492D8E53B2009622EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D07D3C2D8E53B2009622EE /* Assets.xcassets */; };
+		70D07D4D2D8E53BA009622EE /* GemiaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D4B2D8E53BA009622EE /* GemiaiTests.swift */; };
+		70D6B9542D8ED41900ABEAEF /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B9532D8ED41900ABEAEF /* MainTableView.swift */; };
+		70D6B9572D8ED79800ABEAEF /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B9562D8ED79200ABEAEF /* GeminiService.swift */; };
+		B09FBE36456137C7C8C0BDBA /* Pods_GemiaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9758E249AA2E8BDD80BF9B05 /* Pods_GemiaiTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70C67BB42D8DE9DB003ED615 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70C67B952D8DE9D9003ED615 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70C67B9C2D8DE9D9003ED615;
+			remoteInfo = Gemiai;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AD25F735979BB60DAEB5712 /* Pods_Gemiai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gemiai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38617A72E850F23B2925BC44 /* Pods-Gemiai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gemiai.debug.xcconfig"; path = "Target Support Files/Pods-Gemiai/Pods-Gemiai.debug.xcconfig"; sourceTree = "<group>"; };
+		532797B458234D923A613A6C /* Pods-Gemiai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gemiai.release.xcconfig"; path = "Target Support Files/Pods-Gemiai/Pods-Gemiai.release.xcconfig"; sourceTree = "<group>"; };
+		7013372D2D90325C00F36F6F /* SwiftyMocky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyMocky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70145A882D902F4800D82076 /* Mock.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
+		708C8ADA2D90296100352D0C /* GemiaiViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemiaiViewModelSpec.swift; sourceTree = "<group>"; };
+		7094729D2D8E74C60089EFB0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7094729F2D8E769C0089EFB0 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		70C67B9D2D8DE9D9003ED615 /* Gemiai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gemiai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C67BB32D8DE9DB003ED615 /* GemiaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GemiaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70D07D202D8DEA1E009622EE /* Gemiai.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemiai.xctestplan; sourceTree = "<group>"; };
+		70D07D2F2D8E53B2009622EE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		70D07D302D8E53B2009622EE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		70D07D312D8E53B2009622EE /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		70D07D332D8E53B2009622EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70D07D362D8E53B2009622EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70D07D382D8E53B2009622EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70D07D3A2D8E53B2009622EE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70D07D3C2D8E53B2009622EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70D07D402D8E53B2009622EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70D07D4B2D8E53BA009622EE /* GemiaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemiaiTests.swift; sourceTree = "<group>"; };
+		70D6B9532D8ED41900ABEAEF /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		70D6B9562D8ED79200ABEAEF /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		75505022F9DB6205BC394EDD /* Pods-GemiaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemiaiTests.release.xcconfig"; path = "Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests.release.xcconfig"; sourceTree = "<group>"; };
+		9758E249AA2E8BDD80BF9B05 /* Pods_GemiaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GemiaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B0E661FAC91073DA4B3F33 /* Pods-GemiaiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemiaiTests.debug.xcconfig"; path = "Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70C67B9A2D8DE9D9003ED615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7094725A2D8E61360089EFB0 /* RxCocoa in Frameworks */,
+				70C210F12D8E595700B175F9 /* GoogleGenerativeAI in Frameworks */,
+				7094725C2D8E61360089EFB0 /* RxSwift in Frameworks */,
+				44425111B6796A21CE4A584A /* Pods_Gemiai.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C67BB02D8DE9DB003ED615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7094725E2D8E61360089EFB0 /* RxTest in Frameworks */,
+				709472612D8E616B0089EFB0 /* Quick in Frameworks */,
+				709472662D8E61860089EFB0 /* Nimble in Frameworks */,
+				709472632D8E616B0089EFB0 /* QuickLint in Frameworks */,
+				B09FBE36456137C7C8C0BDBA /* Pods_GemiaiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70145A892D902F4800D82076 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				70145A882D902F4800D82076 /* Mock.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7094729A2D8E61FA0089EFB0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				70D6B9532D8ED41900ABEAEF /* MainTableView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		70C67B942D8DE9D9003ED615 = {
+			isa = PBXGroup;
+			children = (
+				70D07D202D8DEA1E009622EE /* Gemiai.xctestplan */,
+				70D07D412D8E53B2009622EE /* Gemiai */,
+				70D07D4C2D8E53BA009622EE /* GemiaiTests */,
+				70C67B9E2D8DE9D9003ED615 /* Products */,
+				7C1C828B9826665613A48682 /* Pods */,
+				DF8A8DF3BDC8038B8812BD5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		70C67B9E2D8DE9D9003ED615 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70C67B9D2D8DE9D9003ED615 /* Gemiai.app */,
+				70C67BB32D8DE9DB003ED615 /* GemiaiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70D07D322D8E53B2009622EE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70D07D2F2D8E53B2009622EE /* AppCoordinator.swift */,
+				70D07D302D8E53B2009622EE /* Coordinator.swift */,
+				70D07D312D8E53B2009622EE /* Storyboarded.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70D07D342D8E53B2009622EE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				70D07D332D8E53B2009622EE /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		70D07D352D8E53B2009622EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7094729F2D8E769C0089EFB0 /* Chat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70D07D3B2D8E53B2009622EE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7094729A2D8E61FA0089EFB0 /* Common */,
+				70D6B9552D8ED6E000ABEAEF /* Home */,
+				70D07D372D8E53B2009622EE /* LaunchScreen.storyboard */,
+				70D07D392D8E53B2009622EE /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		70D07D3D2D8E53B2009622EE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				70D07D3C2D8E53B2009622EE /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		70D07D3E2D8E53B2009622EE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				70D6B9562D8ED79200ABEAEF /* GeminiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		70D07D3F2D8E53B2009622EE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		70D07D412D8E53B2009622EE /* Gemiai */ = {
+			isa = PBXGroup;
+			children = (
+				70D07D322D8E53B2009622EE /* Coordinator */,
+				70D07D342D8E53B2009622EE /* Core */,
+				70D07D352D8E53B2009622EE /* Model */,
+				70D07D3B2D8E53B2009622EE /* Presentation */,
+				70D07D3D2D8E53B2009622EE /* Resource */,
+				70D07D3E2D8E53B2009622EE /* Service */,
+				70D07D3F2D8E53B2009622EE /* Utils */,
+				70D07D402D8E53B2009622EE /* Info.plist */,
+			);
+			path = Gemiai;
+			sourceTree = "<group>";
+		};
+		70D07D4C2D8E53BA009622EE /* GemiaiTests */ = {
+			isa = PBXGroup;
+			children = (
+				70D07D4B2D8E53BA009622EE /* GemiaiTests.swift */,
+				708C8ADA2D90296100352D0C /* GemiaiViewModelSpec.swift */,
+				70145A892D902F4800D82076 /* Mocks */,
+			);
+			path = GemiaiTests;
+			sourceTree = "<group>";
+		};
+		70D6B9552D8ED6E000ABEAEF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7094729D2D8E74C60089EFB0 /* HomeViewModel.swift */,
+				70D07D3A2D8E53B2009622EE /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7C1C828B9826665613A48682 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38617A72E850F23B2925BC44 /* Pods-Gemiai.debug.xcconfig */,
+				532797B458234D923A613A6C /* Pods-Gemiai.release.xcconfig */,
+				D1B0E661FAC91073DA4B3F33 /* Pods-GemiaiTests.debug.xcconfig */,
+				75505022F9DB6205BC394EDD /* Pods-GemiaiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF8A8DF3BDC8038B8812BD5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7013372D2D90325C00F36F6F /* SwiftyMocky.framework */,
+				0AD25F735979BB60DAEB5712 /* Pods_Gemiai.framework */,
+				9758E249AA2E8BDD80BF9B05 /* Pods_GemiaiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70C67B9C2D8DE9D9003ED615 /* Gemiai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70C67BC62D8DE9DB003ED615 /* Build configuration list for PBXNativeTarget "Gemiai" */;
+			buildPhases = (
+				29FF048CE884D29F1BAF82CE /* [CP] Check Pods Manifest.lock */,
+				70C67B992D8DE9D9003ED615 /* Sources */,
+				70C67B9A2D8DE9D9003ED615 /* Frameworks */,
+				70C67B9B2D8DE9D9003ED615 /* Resources */,
+				FC7C5DE47713AE5546751A08 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gemiai;
+			productName = Gemiai;
+			productReference = 70C67B9D2D8DE9D9003ED615 /* Gemiai.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70C67BB22D8DE9DB003ED615 /* GemiaiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70C67BCB2D8DE9DB003ED615 /* Build configuration list for PBXNativeTarget "GemiaiTests" */;
+			buildPhases = (
+				90A43B81ADF0CD20899C0A83 /* [CP] Check Pods Manifest.lock */,
+				70C67BAF2D8DE9DB003ED615 /* Sources */,
+				70C67BB02D8DE9DB003ED615 /* Frameworks */,
+				70C67BB12D8DE9DB003ED615 /* Resources */,
+				D635F05292FCBD94EF5A93B6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70C67BB52D8DE9DB003ED615 /* PBXTargetDependency */,
+			);
+			name = GemiaiTests;
+			productName = GemiaiTests;
+			productReference = 70C67BB32D8DE9DB003ED615 /* GemiaiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70C67B952D8DE9D9003ED615 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					70C67B9C2D8DE9D9003ED615 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					70C67BB22D8DE9DB003ED615 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 70C67B9C2D8DE9D9003ED615;
+					};
+				};
+			};
+			buildConfigurationList = 70C67B982D8DE9D9003ED615 /* Build configuration list for PBXProject "Gemiai" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70C67B942D8DE9D9003ED615;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				70C210EF2D8E595700B175F9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				709472582D8E61360089EFB0 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				7094725F2D8E616B0089EFB0 /* XCRemoteSwiftPackageReference "Quick" */,
+				709472642D8E61860089EFB0 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
+			productRefGroup = 70C67B9E2D8DE9D9003ED615 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70C67B9C2D8DE9D9003ED615 /* Gemiai */,
+				70C67BB22D8DE9DB003ED615 /* GemiaiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70C67B9B2D8DE9D9003ED615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D07D472D8E53B2009622EE /* LaunchScreen.storyboard in Resources */,
+				70D07D482D8E53B2009622EE /* Main.storyboard in Resources */,
+				70D07D492D8E53B2009622EE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C67BB12D8DE9DB003ED615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29FF048CE884D29F1BAF82CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gemiai-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90A43B81ADF0CD20899C0A83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GemiaiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D635F05292FCBD94EF5A93B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7C5DE47713AE5546751A08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gemiai/Pods-Gemiai-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gemiai/Pods-Gemiai-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gemiai/Pods-Gemiai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70C67B992D8DE9D9003ED615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D07D422D8E53B2009622EE /* AppCoordinator.swift in Sources */,
+				70D6B9572D8ED79800ABEAEF /* GeminiService.swift in Sources */,
+				70D07D432D8E53B2009622EE /* Coordinator.swift in Sources */,
+				70D07D442D8E53B2009622EE /* Storyboarded.swift in Sources */,
+				70D07D452D8E53B2009622EE /* AppDelegate.swift in Sources */,
+				709472A02D8E769E0089EFB0 /* Chat.swift in Sources */,
+				7094729E2D8E74D20089EFB0 /* HomeViewModel.swift in Sources */,
+				70D6B9542D8ED41900ABEAEF /* MainTableView.swift in Sources */,
+				70D07D462D8E53B2009622EE /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C67BAF2D8DE9DB003ED615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70145A8A2D902F4800D82076 /* Mock.generated.swift in Sources */,
+				708C8ADB2D90296100352D0C /* GemiaiViewModelSpec.swift in Sources */,
+				70D07D4D2D8E53BA009622EE /* GemiaiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70C67BB52D8DE9DB003ED615 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70C67B9C2D8DE9D9003ED615 /* Gemiai */;
+			targetProxy = 70C67BB42D8DE9DB003ED615 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70D07D372D8E53B2009622EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D07D362D8E53B2009622EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		70D07D392D8E53B2009622EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D07D382D8E53B2009622EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70C67BC72D8DE9DB003ED615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38617A72E850F23B2925BC44 /* Pods-Gemiai.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HGYNZXM7W6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gemiai/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbug.Gemiai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70C67BC82D8DE9DB003ED615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532797B458234D923A613A6C /* Pods-Gemiai.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HGYNZXM7W6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gemiai/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbug.Gemiai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		70C67BC92D8DE9DB003ED615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70C67BCA2D8DE9DB003ED615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70C67BCC2D8DE9DB003ED615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1B0E661FAC91073DA4B3F33 /* Pods-GemiaiTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HGYNZXM7W6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbug.GemiaiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gemiai.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gemiai";
+			};
+			name = Debug;
+		};
+		70C67BCD2D8DE9DB003ED615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75505022F9DB6205BC394EDD /* Pods-GemiaiTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HGYNZXM7W6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbug.GemiaiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gemiai.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gemiai";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70C67B982D8DE9D9003ED615 /* Build configuration list for PBXProject "Gemiai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C67BC92D8DE9DB003ED615 /* Debug */,
+				70C67BCA2D8DE9DB003ED615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70C67BC62D8DE9DB003ED615 /* Build configuration list for PBXNativeTarget "Gemiai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C67BC72D8DE9DB003ED615 /* Debug */,
+				70C67BC82D8DE9DB003ED615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70C67BCB2D8DE9DB003ED615 /* Build configuration list for PBXNativeTarget "GemiaiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C67BCC2D8DE9DB003ED615 /* Debug */,
+				70C67BCD2D8DE9DB003ED615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		709472582D8E61360089EFB0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		7094725F2D8E616B0089EFB0 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		709472642D8E61860089EFB0 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		70C210EF2D8E595700B175F9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google-gemini/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		709472592D8E61360089EFB0 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709472582D8E61360089EFB0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7094725B2D8E61360089EFB0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709472582D8E61360089EFB0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		7094725D2D8E61360089EFB0 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709472582D8E61360089EFB0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		709472602D8E616B0089EFB0 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7094725F2D8E616B0089EFB0 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		709472622D8E616B0089EFB0 /* QuickLint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7094725F2D8E616B0089EFB0 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = QuickLint;
+		};
+		709472652D8E61860089EFB0 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 709472642D8E61860089EFB0 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		70C210F02D8E595700B175F9 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70C210EF2D8E595700B175F9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 70C67B952D8DE9D9003ED615 /* Project object */;
+}

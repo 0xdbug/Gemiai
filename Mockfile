@@ -1,0 +1,15 @@
+sourceryCommand: null
+sourceryTemplate: null
+GemiaiTests:
+  sources:
+    include:
+    - ./Gemiai
+  output: ./GemiaiTests/Mocks/Mock.generated.swift
+  targets:
+  - GemiaiTests
+  testable:
+  - Gemiai
+  import:
+  - Foundation
+  - RxSwift
+  - GoogleGenerativeAI

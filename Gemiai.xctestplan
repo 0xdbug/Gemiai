@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "4A4FE9FB-27E4-4860-87F0-AB7710DABA2C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Gemiai.xcodeproj",
+      "identifier" : "70C67B9C2D8DE9D9003ED615",
+      "name" : "Gemiai"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:Gemiai.xcodeproj",
+        "identifier" : "70C67BB22D8DE9DB003ED615",
+        "name" : "GemiaiTests"
+      }
+    }
+  ],
+  "version" : 1
+}

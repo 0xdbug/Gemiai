@@ -1,0 +1,22 @@
+# Xcode
+.DS_Store
+xcuserdata/
+*.xcworkspace/
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+/.build/
+.swiftpm/
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+
+Mock.generated.swift
+.mocky*/
+
