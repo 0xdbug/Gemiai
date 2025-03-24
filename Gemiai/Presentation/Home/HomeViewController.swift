@@ -21,6 +21,34 @@ class HomeViewController: UIViewController, Storyboarded {
         
         setupView()
         setupTableView()
+        
+        addCoreData(message: "hi", isUser: false)
+        fetchCoreData(onSuccess: { item in
+            print(item)
+        })
+    }
+    
+    func addCoreData(message: String, isUser: Bool) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let newData = ChatEntity(context: context)
+        newData.isUser = isUser
+        newData.message = message
+        newData.timestamp = Date()
+        do {
+            try context.save()
+        } catch {
+            print("error-Saving data")
+        }
+    }
+    
+    func fetchCoreData(onSuccess: @escaping ([ChatEntity]?) -> Void) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let items = try context.fetch(ChatEntity.fetchRequest()) as? [ChatEntity]
+            onSuccess(items)
+        } catch {
+            print("error-Fetching data")
+        }
     }
     
     func setupView() {

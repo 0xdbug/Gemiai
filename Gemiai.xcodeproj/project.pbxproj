@@ -30,6 +30,7 @@
 		70D07D4D2D8E53BA009622EE /* GemiaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D07D4B2D8E53BA009622EE /* GemiaiTests.swift */; };
 		70D6B9542D8ED41900ABEAEF /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B9532D8ED41900ABEAEF /* MainTableView.swift */; };
 		70D6B9572D8ED79800ABEAEF /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D6B9562D8ED79200ABEAEF /* GeminiService.swift */; };
+		70F8B2322D91E6DE00BC3DB8 /* ChatData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70F8B2302D91E6DE00BC3DB8 /* ChatData.xcdatamodeld */; };
 		B09FBE36456137C7C8C0BDBA /* Pods_GemiaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9758E249AA2E8BDD80BF9B05 /* Pods_GemiaiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		70D07D4B2D8E53BA009622EE /* GemiaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemiaiTests.swift; sourceTree = "<group>"; };
 		70D6B9532D8ED41900ABEAEF /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		70D6B9562D8ED79200ABEAEF /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		70F8B2312D91E6DE00BC3DB8 /* ChatData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatData.xcdatamodel; sourceTree = "<group>"; };
 		75505022F9DB6205BC394EDD /* Pods-GemiaiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemiaiTests.release.xcconfig"; path = "Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests.release.xcconfig"; sourceTree = "<group>"; };
 		9758E249AA2E8BDD80BF9B05 /* Pods_GemiaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GemiaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B0E661FAC91073DA4B3F33 /* Pods-GemiaiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GemiaiTests.debug.xcconfig"; path = "Target Support Files/Pods-GemiaiTests/Pods-GemiaiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		70D07D412D8E53B2009622EE /* Gemiai */ = {
 			isa = PBXGroup;
 			children = (
+				70F8B22F2D91E6AC00BC3DB8 /* Data */,
 				70D07D322D8E53B2009622EE /* Coordinator */,
 				70D07D342D8E53B2009622EE /* Core */,
 				70D07D352D8E53B2009622EE /* Model */,
@@ -228,6 +231,14 @@
 				70D07D3A2D8E53B2009622EE /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		70F8B22F2D91E6AC00BC3DB8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				70F8B2302D91E6DE00BC3DB8 /* ChatData.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		7C1C828B9826665613A48682 /* Pods */ = {
@@ -447,6 +458,7 @@
 				70D07D422D8E53B2009622EE /* AppCoordinator.swift in Sources */,
 				70D6B9572D8ED79800ABEAEF /* GeminiService.swift in Sources */,
 				70D07D432D8E53B2009622EE /* Coordinator.swift in Sources */,
+				70F8B2322D91E6DE00BC3DB8 /* ChatData.xcdatamodeld in Sources */,
 				70D07D442D8E53B2009622EE /* Storyboarded.swift in Sources */,
 				70D07D452D8E53B2009622EE /* AppDelegate.swift in Sources */,
 				709472A02D8E769E0089EFB0 /* Chat.swift in Sources */,
@@ -823,6 +835,19 @@
 			productName = GoogleGenerativeAI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		70F8B2302D91E6DE00BC3DB8 /* ChatData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70F8B2312D91E6DE00BC3DB8 /* ChatData.xcdatamodel */,
+			);
+			currentVersion = 70F8B2312D91E6DE00BC3DB8 /* ChatData.xcdatamodel */;
+			path = ChatData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 70C67B952D8DE9D9003ED615 /* Project object */;
 }
