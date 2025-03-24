@@ -8,7 +8,6 @@
 import UIKit
 
 struct Chat {
-    let id: String
     let message: String
     let isUser: Bool
 }

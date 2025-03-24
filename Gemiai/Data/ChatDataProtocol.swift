@@ -6,9 +6,11 @@
 //
 
 import CoreData
+import RxSwift
 
 // sourcery: AutoMockable
 protocol ChatDataProtocol {
+    var chats: Observable<[Chat]> { get }
     func addMessage(_ chat: Chat)
-    func fetchMessages(onSuccess: @escaping ([Chat]?) -> Void)
+    func fetchMessages()
 }
