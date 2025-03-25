@@ -15,38 +15,77 @@ import SwiftyMocky
 
 class GemiaiViewModelSpec: QuickSpec {
     override class func spec() {
-        
-        // sendMessage with any message should return mock response
-        describe("sendMessage") {
-            var mockService: GeminiServiceProtocolMock!
+        describe("HomeViewModel") {
+            var sut: HomeViewModel!
+            var mockGeminiService: GeminiServiceProtocolMock!
+            var mockChatDataManager: ChatDataProtocolMock!
             var disposeBag: DisposeBag!
             var scheduler: TestScheduler!
-            var observer: TestableObserver<String>!
+            var observer: TestableObserver<[Chat]>!
             
             beforeEach {
-                mockService = GeminiServiceProtocolMock()
-                
+                mockGeminiService = GeminiServiceProtocolMock()
+                mockChatDataManager = ChatDataProtocolMock()
                 disposeBag = DisposeBag()
                 scheduler = TestScheduler(initialClock: 0)
-                observer = scheduler.createObserver(String.self)
+                observer = scheduler.createObserver([Chat].self)
+                
+                sut = HomeViewModel(geminiService: mockGeminiService, chatDataManager: mockChatDataManager)
             }
             
-            context("with any message") {
-                it("should return mock response") {
-                    Given(mockService, .sendMessage(.any, willReturn: Observable.just("mock response")))
-
-                    let test = mockService.sendMessage("test")
-                    
-                    test.bind(to: observer).disposed(by: disposeBag)
-                    
-                    scheduler.start()
-                    
-                    expect(observer.events).to(equal([
-                        .next(0, "mock response"),
-                        .completed(0)
-                    ]))
+            describe("fetchMessages") {
+                context("when messages exist") {
+                    it("should load messages from storage") {
+                        // given
+                        let existingChats = [
+                            Chat(message: "user", isUser: true),
+                            Chat(message: "ai", isUser: false),
+                            Chat(message: "user", isUser: true)
+                        ]
+                        Given(mockChatDataManager, .chats(getter: Observable.just(existingChats)))
+                        
+                        // when
+                        sut.chats.bind(to: observer).disposed(by: disposeBag)
+                        sut.fetchMessages()
+                        
+                        // then
+                        scheduler.start()
+                        
+                        expect(observer.events).to(equal([
+                            .next(0, []),
+                            .next(0, existingChats)
+                        ]))
+                        mockChatDataManager.verify(.fetchMessages())
+                    }
+                }
+            }
+            
+            describe("sendMessage") {
+                context("when sending a message") {
+                    it("should save messages and update observable") {
+                        // given
+                        Given(mockGeminiService, .sendMessage(.any, willReturn: Observable.just("AI response")))
+                        
+                        // when
+                        sut.chats.bind(to: observer).disposed(by: disposeBag)
+                        sut.sendMessage("hi")
+                        
+                        // then
+                        scheduler.start()
+                        
+                        mockChatDataManager.verify(.addMessage(.value(Chat(message: "hi", isUser: true))))
+                        
+                        let expectedChats = [
+                            Chat(message: "hi", isUser: true),
+                            Chat(message: "AI response", isUser: false)
+                        ]
+                        Given(mockChatDataManager, .chats(getter: Observable.just(expectedChats)))
+                        
+                        expect(observer.events.map { $0.value.element }).toNot(beEmpty())
+                    }
                 }
             }
         }
     }
 }
+

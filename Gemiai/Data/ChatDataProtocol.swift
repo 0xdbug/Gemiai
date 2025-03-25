@@ -9,6 +9,7 @@ import CoreData
 import RxSwift
 
 // sourcery: AutoMockable
+//sourcery: typealias = "Chat = Gemiai.Chat"
 protocol ChatDataProtocol {
     var chats: Observable<[Chat]> { get }
     func addMessage(_ chat: Chat)
