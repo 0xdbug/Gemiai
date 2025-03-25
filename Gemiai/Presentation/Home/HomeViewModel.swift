@@ -33,21 +33,13 @@ class HomeViewModel {
             self.chats.accept(chat)
         })
         .disposed(by: disposeBag)
-//        guard let chats = chats else { return }
-//        
-//        var updatedChats = self.chats.value
-//        updatedChats.append(contentsOf: chats.map {
-//            Chat(message: $0.message, isUser: $0.isUser)
-//        })
-//        
-//        self.chats.accept(updatedChats)
     }
     
     func sendMessage(_ message: String) {
         let userChat = Chat(message: message, isUser: true)
         chatDataManager.addMessage(userChat)
         
-        GeminiService().sendMessage(message)
+        geminiService.sendMessage(message)
             .subscribe(
                 onNext: { [weak self] response in
                     guard let self = self else { return }
