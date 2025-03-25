@@ -7,8 +7,7 @@
 
 import UIKit
 
-struct Chat {
-    let id: String
+struct Chat: Equatable {
     let message: String
     let isUser: Bool
 }

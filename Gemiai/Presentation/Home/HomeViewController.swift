@@ -14,13 +14,18 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var tableView: MainTableView!
     
     let disposeBag = DisposeBag()
-    var viewModel = HomeViewModel(geminiService: GeminiService())
-    
+    var viewModel = HomeViewModel(geminiService: GeminiService(), chatDataManager: ChatDataManager())
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         setupTableView()
+        appendInitialData()
+    }
+    
+    func appendInitialData() {
+        viewModel.fetchMessages()
     }
     
     func setupView() {
