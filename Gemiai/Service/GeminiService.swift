@@ -27,7 +27,7 @@ class GeminiService: GeminiServiceProtocol {
 //        guard let apiKey = ProcessInfo.processInfo.environment["GEMINI_API_KEY"] else {
 //            fatalError("Add GEMINI_API_KEY as an Environment Variable in your app's scheme.")
 //        }
-        let apiKey = "AIzaSyDSmmuDAin5TiFVjxlVuS6-fhV7lUD1PDU"
+        let apiKey = "AIzaSyDSmmuDAin5TiFVjxlVuS6-fhV7lUD1PDU" // already deleted
         
         self.model = GenerativeModel(
             name: "gemini-2.0-flash",

@@ -72,16 +72,14 @@ class GemiaiViewModelSpec: QuickSpec {
                         
                         // then
                         scheduler.start()
-                        
+
+                        // is this even good?
                         mockChatDataManager.verify(.addMessage(.value(Chat(message: "hi", isUser: true))))
-                        
-                        let expectedChats = [
-                            Chat(message: "hi", isUser: true),
-                            Chat(message: "AI response", isUser: false)
-                        ]
-                        Given(mockChatDataManager, .chats(getter: Observable.just(expectedChats)))
-                        
-                        expect(observer.events.map { $0.value.element }).toNot(beEmpty())
+                        mockGeminiService.verify(.sendMessage(.value("hi")))
+                        mockChatDataManager.verify(.addMessage(.value(Chat(message: "AI response", isUser: false))))
+
+                        expect(observer.events.count).to(equal(1))
+                        expect(observer.events.first?.value.element).to(equal([]))
                     }
                 }
             }
